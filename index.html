@@ -145,10 +145,18 @@
         .scoring-header { font-size: clamp(2rem,3.2vw,3.4rem); font-weight: 800; padding: .6rem 0.5em; color: white; border-radius: 2rem 2rem 0 0; }
 
         .scoring-section table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; background: #fff8e1; overflow: hidden; }
-        .scoring-section th, .scoring-section td {
-            border: 0.2rem solid #ddd; padding: .6rem; text-align: center; vertical-align: middle;
-            font-size: clamp(2rem, 3vw, 3.2rem);
+        .scoring-section th {
+            border: 0.2rem solid #ddd; padding: .6rem; text-align: center; vertical-align: middle; font-weight: bolder;
+            font-size: clamp(2rem, 3vw, 5vw);
         }
+        .scoring-section td {
+            border: 0.2rem solid #ddd; padding: .6rem; text-align: center; vertical-align: middle; font-weight: 500;
+            font-size: clamp(2rem, 3vw, 5vw);
+        }
+        .category-total-cell > td > strong { font-size: clamp(2rem, 3vw, 5vw); }
+        .silver-spoon-row > td > div { display:flex; align-items:center; justify-content:center; margin-left: 1rem; }
+        .silver-spoon-row > td > div > svg { font-size: clamp(2.5rem, 3.5vw, 4vw); height: clamp(3.5rem, 6.5vw, 8vw); }
+        .silver-spoon-row > td > div > span { font-size: clamp(2rem, 3vw, 5vw); }
         .scoring-section th { background-color: rgba(0,0,0,0.05); font-weight: bold; }
         .scoring-section .button-container { display: flex; justify-content: center; gap: .4rem; flex-wrap: wrap; }
         .button-container .lock-button, .block-button { flex: 1; }
@@ -168,7 +176,7 @@
         .game-player-score > span { font-size: clamp(2rem, 4vh, 4rem); font-weight: 800; }
         .game-player-score > span:nth-child(2) { padding: 0 1em; border-radius: 5rem; color: white; background: rgba(0,0,0,.2); }
         .category-total-cell { height: 10vh; }
-        .grownups-total, .kids-total { font-size: clamp(2rem, 3vh, 3rem); font-weight: 800; }
+        .grownups-total, .kids-total { font-size: clamp(2rem, 3vw, 5vw); font-weight: 800; }
         .score-button { font-size: clamp(2rem,3vw,5rem); }
 
         #result-page { width: 100%; display: flex; flex-direction: column; gap: 1em; align-items: center; justify-content: flex-start; }
@@ -685,10 +693,14 @@
                                     <td><strong>Kids' Table Total</strong></td>
                                     <td colspan="2"><span class="kids-total">0</span></td>
                                 </tr>
-                                <tr>
+                                <tr class="silver-spoon-row">
                                     <td>
-                                        <div style="display:flex; align-items:center; gap:.6rem; justify-content:center;">
-                                            <svg fill="#000000" version="1.1" width="28" height="28" viewBox="0 0 256 256"><path d="M166.358,67.528C166.358,37.561,144.023,5,128,5c-16.994,0-38.358,32.561-38.358,62.528 c0,25.466,12.405,37.872,29.132,41.026l-3.064,130.032C115.549,245.395,121.098,251,128,251h0c6.902,0,12.451-5.605,12.291-12.414 l-3.064-130.032C153.953,105.4,166.358,92.994,166.358,67.528z"></path></svg>
+                                        <div>
+                                            <svg viewBox="60 0 136 256" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor" d="M166.358,67.528C166.358,37.561,144.023,5,128,5c-16.994,0-38.358,32.561-38.358,62.528 
+                                                c0,25.466,12.405,37.872,29.132,41.026l-3.064,130.032C115.549,245.395,121.098,251,128,251h0c6.902,0,12.451-5.605,12.291-12.414 
+                                                l-3.064-130.032C153.953,105.4,166.358,92.994,166.358,67.528z"/>
+                                            </svg>
                                             <span>Silver Spoon</span>
                                         </div>
                                     </td>
