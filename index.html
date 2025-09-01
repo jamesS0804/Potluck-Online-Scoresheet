@@ -93,7 +93,7 @@
         .avatar-button.selected-avatar .avatar-name { border: 0.5rem solid #007BFF; position: relative; background-color: #007BFF; }
         .selected-label { position: absolute; transform: translateX(-50%); left: 50%; font-size: clamp(3rem,4vh,8rem); color: #fff; font-weight: bolder; }
 
-        #player-list { list-style: none; padding: 0; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        #player-list { list-style: none; padding: 0; width: 100%; display: grid; padding-left: 2em; overflow-y: scroll; height: 100%; flex: 1; }
         .player-item {
             width: 95%; height: fit-content; display: flex; align-items: center; gap: 2em;
             background: white; border-radius: 1rem; margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0,0,0,0.1);
@@ -183,7 +183,7 @@
         #result-page > span { font-size: clamp(5rem,2vh,8rem); font-weight: bolder; }
         #result-container > span {
             position: absolute; top: 0; transform: translateY(-50%); z-index: 2; background-color: #fdf3da;
-            padding: 0 2em; font-weight: 800; border-radius: 5rem; font-size: clamp(2.25rem, 8vw, 6rem);
+            padding: 0 2em; font-weight: 800; border-radius: 5rem; font-size: clamp(2rem, 6vw, 6rem);
             box-shadow: 0 0.5rem 0.7rem rgba(0,0,0,0.1);
         }
         #result-container > div {
@@ -202,7 +202,7 @@
         #result-container { display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; width: 100%; margin-top: 2vh; }
         .player-ranking-row {
             display: flex; justify-content: flex-start; align-items: center; width: 100%; border-radius: .8rem;
-            box-shadow: 0 0.5rem 0.7rem rgba(0,0,0,0.1); padding: 1em 2em; color: #4C2A0C; gap: 1em; position: relative;
+            box-shadow: 0 0.5rem 0.7rem rgba(0,0,0,0.1); padding: 0.5em 0.75em; color: #4C2A0C; gap: 1em; position: relative;
         }
         .player-ranking-row > svg {
             position: absolute; top: -50%; right: -3%; height: clamp(7rem, 11vw, 11rem); width: auto; transform: rotate(20deg);
