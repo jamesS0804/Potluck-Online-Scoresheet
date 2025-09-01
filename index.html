@@ -93,7 +93,7 @@
         .avatar-button.selected-avatar .avatar-name { border: 0.5rem solid #007BFF; position: relative; background-color: #007BFF; }
         .selected-label { position: absolute; transform: translateX(-50%); left: 50%; font-size: clamp(3rem,3.5vh,6vh); color: #fff; font-weight: bolder; }
 
-        #player-list { list-style: none; padding: 0; width: 100%; display: grid; padding-left: 2em; overflow-y: scroll; height: 100%; flex: 1; }
+        #player-list { list-style: none; padding: 0; width: 100%; display: grid; padding-left: 2em; overflow-y: scroll; height: 100%; align-items: center; height: max-content; }
         .player-item {
             width: 95%; height: fit-content; display: flex; align-items: center; gap: 2em;
             background: white; border-radius: 1rem; margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0,0,0,0.1);
@@ -127,7 +127,7 @@
         }
         #game-player-list.solo-mode .game-player-box { flex: 1 1 auto; max-width: 100%; }
         .game-player-box {
-            flex: 0 0 auto; border-radius: 5rem; width: clamp(80vw,85vw,90vw); padding: 1em;
+            flex: 0 0 auto; border-radius: 5rem; width: clamp(80vw,82vw,90vw); padding: 1em;
             display: flex; height: min-content; flex-direction: column; align-items: center; gap: 0.5em;
             position: relative; box-shadow: 0 0.5rem 0.7rem rgba(0,0,0,0.1);
         }
@@ -194,7 +194,23 @@
             justify-content: center; align-items: center; width: 90%; border-radius: 1rem; margin-top: 1rem;
             box-shadow: 0 0.5rem 0.7rem rgba(0,0,0,0.1); height: max-content;
         }
-        #result-list { margin:0; display: grid; justify-content: center; align-items: center; grid-template-columns: minmax(0, 0.9fr); gap: 1em; width: 100%; border-radius: .8rem; overflow-y: scroll; overflow-x: hidden; height: clamp(40vh,35vh,20vh); padding: clamp(2.25em,1em,1em) clamp(0.1em,0.1em,1em) 0 0;}
+        #result-list{
+  /* grid + centering */
+  display: grid;
+  justify-content: center;                 /* centers the column */
+
+  /* one column that’s compact but responsive */
+  grid-template-columns: minmax(0, clamp(320px, 70vw, 900px));
+
+  gap: 1em;
+  width: 100%;
+  margin: 0;                               /* keep your existing margins if needed */
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: clamp(40vh,35vh,20vh);
+  padding: clamp(2.25em,1em,1em) clamp(0.1em,0.1em,1em) 0 0;
+}
+
         .player-name, .player-score { font-size: clamp(1.3rem, 4vw, 4rem); font-size: bold; }
         .player-score { margin-left: auto; font-weight: bolder; }
         .congrats-message { display: flex; flex-direction: column; justify-content: center; align-items: center; color: #4C2A0C; margin-top: 0.8em; }
