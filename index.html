@@ -91,7 +91,7 @@
         }
         .avatar-button.selected-avatar { border: 0.5rem solid #007BFF; position: relative; background-color: #007BFF; }
         .avatar-button.selected-avatar .avatar-name { border: 0.5rem solid #007BFF; position: relative; background-color: #007BFF; }
-        .selected-label { position: absolute; transform: translateX(-50%); left: 50%; font-size: clamp(4rem,4vh,8rem); color: #fff; font-weight: bolder; }
+        .selected-label { position: absolute; transform: translateX(-50%); left: 50%; font-size: clamp(3rem,4vh,8rem); color: #fff; font-weight: bolder; }
 
         #player-list { list-style: none; padding: 0; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
         .player-item {
@@ -130,35 +130,35 @@
         }
         #game-player-list.solo-mode .game-player-box { flex: 1 1 auto; max-width: 100%; }
         .game-player-box {
-            flex: 0 0 auto; border-radius: 5rem; width: clamp(60vw,65vw,70vw); padding: 1em;
+            flex: 0 0 auto; border-radius: 5rem; width: clamp(80vw,85vw,90vw); padding: 1em;
             display: flex; height: min-content; flex-direction: column; align-items: center; gap: 0.5em;
-            position: relative; box-shadow: 0 0.5rem 0.7rem rgba(0,0,0,0.1); height: max-content;
+            position: relative; box-shadow: 0 0.5rem 0.7rem rgba(0,0,0,0.1);
         }
         .crown-icon { position: absolute; aspect-ratio: 1/1; top: -40%; right: -5%; height: clamp(8rem, 13vw, 13rem); z-index: 2; fill: #f1b020; transform: rotate(20deg); }
-        .player-header { position: relative; display: flex; width: 100%; justify-content: flex-start; align-items: center; }
+        .player-header { position: relative; display: flex; width: 100%; justify-content: flex-start; align-items: center; height: clamp(8vh,10vh,15vh) }
         .game-player-box img { width: clamp(6rem,10vh,12rem); object-fit: cover; }
         #game-player-name-avatar { display: flex; flex-direction: column; justify-content: center; align-items: center; line-height: 1; }
         .game-player-avatar-name { font-weight: bold; text-align: center; font-size: clamp(2rem,4vh,4rem); }
-        .game-player-name { font-weight: bold; text-align: center; font-size: clamp(2rem,3vh,3rem); }
+        .game-player-name { font-weight: bold; text-align: center; font-size: clamp(2.5rem,2.5vw,5rem); }
 
         .locked { background-color: #ddd; color: #444; cursor: not-allowed; font-weight: bold; }
         .score-input:disabled { background-color: #f0f0f0; }
 
         .scoring-section { width: 100%; background-color: #fdf3da; border-radius: 2rem; }
-        .scoring-header { font-size: clamp(1.8rem,2.2vw,2.4rem); font-weight: 800; padding: .6rem .8rem; color: white; border-radius: 2rem 2rem 0 0; }
+        .scoring-header { font-size: clamp(2rem,3.2vw,3.4rem); font-weight: 800; padding: .6rem 0.5em; color: white; border-radius: 2rem 2rem 0 0; }
 
         /* Table styling for scoring */
         .scoring-section table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; background: #fff8e1; overflow: hidden; }
         .scoring-section th, .scoring-section td {
             border: 0.2rem solid #ddd; padding: .6rem; text-align: center; vertical-align: middle;
-            font-size: clamp(1.4rem, 2vw, 2.2rem);
+            font-size: clamp(2rem, 3vw, 3.2rem);
         }
         .scoring-section th { background-color: rgba(0,0,0,0.05); font-weight: bold; }
         .scoring-section .button-container { display: flex; justify-content: center; gap: .4rem; flex-wrap: wrap; }
         .button-container .lock-button, .block-button { flex: 1; }
         .action-cell { flex: 1; min-width: 100%; }
         .scoring-section input.score-input {
-            width: 100%; height: 100%; padding: .3rem; font-size: clamp(1.4rem,2vw,2.2rem); text-align: center; background: transparent;
+            width: 100%; height: 100%; padding: .3rem; font-size: clamp(2rem,3vw,5rem); text-align: center; background: transparent;
         }
         .side-plate-row { height: 15vh; }
         .side-plate-grid {
@@ -173,6 +173,7 @@
         .game-player-score > span:nth-child(2) { padding: 0 1em; border-radius: 5rem; color: white; background: rgba(0,0,0,.2); }
         .category-total-cell { height: 10vh; }
         .grownups-total, .kids-total { font-size: clamp(2rem, 3vh, 3rem); font-weight: 800; }
+        .score-button { font-size: clamp(2rem,3vw,5rem); }
 
         /* RESULTS */
         #result-page { width: 100%; display: flex; flex-direction: column; gap: 1em; align-items: center; justify-content: flex-start; }
