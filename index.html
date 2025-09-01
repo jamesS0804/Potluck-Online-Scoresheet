@@ -32,8 +32,8 @@
             font-weight: bolder; color: #4C2A0C;
             display: flex; flex-direction: column; align-items: center; width: 100%;
         }
-        .title-main { font-size: clamp(2.5rem, 10vw, 7rem); }
-        .title-sub { font-size: clamp(1.6rem, 7vw, 4.5rem); }
+        .title-main { font-size: clamp(2.5rem, 12vw, 25vw); }
+        .title-sub { font-size: clamp(1.6rem, 7.5vw, 22vw); }
         #main-page { gap: 15em; }
         #setup-page  { justify-content: flex-start; height: 100%; }
         #setup-page, #new-player-page, #game-page, #result-page { display: none; }
@@ -180,13 +180,13 @@
         .score-button { font-size: clamp(2rem,3vw,5rem); }
 
         #result-page { width: 100%; display: flex; flex-direction: column; gap: 1em; align-items: center; justify-content: flex-start; }
-        #result-page > h1 { line-height: 1; margin: 0 0 5vh 0;}
+        #result-page > h1 { line-height: 1; margin: 0 0 1vh 0;}
         #result-page > h1 > span:nth-child(1) { font-size: clamp(2.5rem, 10vw, 7rem); }
         #result-page > h1 > span:nth-child(2) { font-size: clamp(1.6rem, 7vw, 4.5rem); }
         #result-page > span { font-size: clamp(5rem,2vh,8rem); font-weight: bolder; }
         #result-container > span {
             position: absolute; top: 0; transform: translateY(-50%); z-index: 2; background-color: #fdf3da;
-            padding: 0 2em; font-weight: 800; border-radius: 5rem; font-size: clamp(2rem, 6vw, 6rem);
+            padding: 0 2em; font-weight: 800; border-radius: 5rem; font-size: clamp(3rem, 5vw, 5rem);
             box-shadow: 0 0.5rem 0.7rem rgba(0,0,0,0.1);
         }
         #result-container > div {
@@ -194,10 +194,10 @@
             justify-content: center; align-items: center; width: 90%; border-radius: 1rem; margin-top: 1rem;
             box-shadow: 0 0.5rem 0.7rem rgba(0,0,0,0.1); height: max-content;
         }
-        #result-list { display: grid; justify-content: center; align-items: center; gap: 1em; width: 100%; border-radius: .8rem; overflow-y: scroll; overflow-x: hidden; height: 100%; padding: clamp(2.5em,1em,1em) clamp(0.1em,0.1em,1em) 0 0;}
+        #result-list { margin:0; display: grid; justify-content: center; align-items: center; grid-template-columns: minmax(0, 0.9fr); gap: 1em; width: 100%; border-radius: .8rem; overflow-y: scroll; overflow-x: hidden; height: clamp(45vh,35vh,20vh); padding: clamp(2.25em,1em,1em) clamp(0.1em,0.1em,1em) 0 0;}
         .player-name, .player-score { font-size: clamp(1.3rem, 4vw, 4rem); font-size: bold; }
         .player-score { margin-left: auto; font-weight: bolder; }
-        .congrats-message { display: flex; flex-direction: column; justify-content: center; align-items: center; color: #4C2A0C; }
+        .congrats-message { display: flex; flex-direction: column; justify-content: center; align-items: center; color: #4C2A0C; margin-top: 0.8em; }
         .congrats-line, .congrats-line > strong{ font-size: clamp(2rem, 3.5vw, 4rem); font-weight: bolder; text-align: center; }
         .congrats-subline{ font-size: clamp(1.5rem, 3vw, 3.5rem); font-weight: bold; text-align: center; }
         #result-page > div:nth-child(3) { display: flex; justify-content: center; align-items: center; gap: 0.5rem }
